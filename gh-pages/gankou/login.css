@@ -9,3 +9,12 @@
 	width: 300px;
 	height: 200px;
 }
+.login form {
+	font-size: 12px;
+	text-align: center;
+}
+.col-md-3 {
+	padding-left: 40px;
+	padding-right: 5px;
+
+}
