@@ -1,1 +1,1 @@
-﻿https://huangnuoen.github.io/jixin/gankou/login.html
+﻿https://huangnuoen.github.io/jixin/gh-pages/gankou/login.html
