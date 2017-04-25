@@ -3,7 +3,6 @@
 <head runat="server">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="login.css">
 	<!--[if lte IE 9]>
@@ -16,29 +15,27 @@
 </head>
 <body>
 	<div class="container">
+		<div>
+			<h4>港口综合信息管理系统<br><small>Management System</small></h4>		
+		</div>
 		<div class="login">
-			<div>
-				
-				<h4>港口综合信息管理系统<br><small>Management System</small></h4>
-				
-			</div>
 			<form action="" id="form1" role="form" class="form-horizontal">
 				<div class="form-group">
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-md-4 col-sm-4">
 							<label for="name" class="control-label">用户名</label>
 						</div>
-						<div class="col-md-7">
+						<div class="col-md-7 col-sm-7">
 							<input type="text" class="form-control" placeholder="请输入用户名">
 						</div>
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-md-4 col-sm-4">
 							<label for="password" class="control-label">密码</label>
 						</div>
-						<div class="col-md-7">
+						<div class="col-md-7 col-sm-4">
 							<input type="password" class="form-control" placeholder="请输入密码">
 						</div>
 					</div>
@@ -47,5 +44,10 @@
 			</form>
 		</div>
 	</div>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('input').placeholder()
+	})
+	</script>
 </body>
 </html>
