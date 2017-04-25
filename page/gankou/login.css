@@ -13,8 +13,8 @@ html, body {
 	position: relative;
 	background-image: url(images/login.jpg);
 	background-size: cover;
-	-ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login.jpg')”;
-	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader('src=images/login.jpg');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/login.jpg', sizingMethod='scale');
+	-ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/login.jpg', sizingMethod='scale');
 }
 .login {
 	width: 230px;
