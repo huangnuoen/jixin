@@ -8,11 +8,14 @@ html, body {
 	font-family: "lucida Grande",Verdana,"Microsoft YaHei"
 }
 .container {
-	width: 100%;
+	width: 1340px;
 	height: 100%;
 	margin: 0;
 	position: relative;
 	background-image: url(images/login.jpg);
+	background-size: cover;
+	-ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login.jpg')”;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader('src=images/login.jpg');
 }
 .login {
 	width: 230px;
