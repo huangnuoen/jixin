@@ -13,10 +13,6 @@ body {
 .container {
 	width: 100%;
 	height: 100%;
-	background-image: url(images/login.jpg);
-	background-size: cover;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/login.jpg', sizingMethod='scale');
-	-ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/login.jpg', sizingMethod='scale');
 }
 .login {
 	width: 230px;
