@@ -8,7 +8,10 @@ html, body {
 	font-family: "lucida Grande",Verdana,"Microsoft YaHei"
 }
 body {
-	background-image: url(images/login.jpg);
+	background: url(images/login.jpg) no-repeat;
+	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login.jpg',sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login.jpg',sizingMethod='scale')";
 }
 .container {
 	width: 100%;
@@ -17,15 +20,20 @@ body {
 .login {
 	width: 230px;
 	height: auto;
-	padding: 10px;
+	padding: 15px;
 	/*position: relative;
 	top: 10%;
 	left: 40%;*/
 	margin: 36px auto;
-	padding-top: 20px;
 	border: 1px solid #ccc;
 	border-radius: 8px;
-	background-color: rgb(255, 255, 255);
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	background-color: #fff;
+	background: url(images/opacity.png);/*IE8透明图层背景*/
+	/*opacity: .5;
+	filter: alpha(opacity=50);
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);*/
 }
 h4 {
 	font-size: 3em;
@@ -40,4 +48,11 @@ h4 {
 .col-md-4 {
 	padding-left: 40px;
 	padding-right: 5px;
+}
+button {
+	width: 146px;
+	height: 26px;
+	background-image: url(images/sbbtn.jpg);
+	border: none;
+	text-indent: -10000px;
 }
