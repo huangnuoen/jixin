@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	text-align: center;
+}
+.container .header {
+	margin-bottom: 10px;
+	border-bottom: 2px solid #137bdf;
+}
+table {
+	width: 90%;
+	margin: 10px auto;
+}
+table, th, td {
+	border: 1px solid #ccc;
+}
+.meeting .row table tr th {
+	width: 10%;
+	padding: 20px;
+	text-align: center;
+	background-color: #e0e9ff;
+}
+.meeting .row table tr td {
+	text-align: left;
+	padding: 20px;
+}
