@@ -9,6 +9,9 @@ html, body {
 }
 body {
 	background: url(images/login.jpg) no-repeat;
+	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login.jpg',sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login.jpg',sizingMethod='scale')";
 }
 .container {
 	width: 100%;
