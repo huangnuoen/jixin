@@ -20,8 +20,8 @@ window.onload = function() {
 		$links[i].destination = id;
 		$links[i].onclick = function() {
 			checkID(this.destination);
-			console.log($(this).parent().className == 'selected');
-			//return false;
+			this.parentNode.setAttribute('class', 'selected');
+			$(this.parentNode).siblings().removeClass('selected');
 		}
 	};
 }
