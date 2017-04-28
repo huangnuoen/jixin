@@ -16,9 +16,9 @@ window.onload = function() {
 	for (var i = 0; i < $links.length; i++) {
 		var href = $links[i].getAttribute('href');
 		var id = href.split('#')[1];
-		document.getElementById(id).style.display = 'none';
 		$links[i].destination = id;
 		$links[i].onclick = function() {
+			document.getElementById(id).style.display = 'none';
 			checkID(this.destination);
 			this.parentNode.setAttribute('class', 'selected');
 			$(this.parentNode).siblings().removeClass('selected');
