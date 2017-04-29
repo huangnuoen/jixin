@@ -2,23 +2,20 @@
 	margin: 0;
 	padding: 0;
 }
-.upload table img {
+.download img {
 	width: 80px;
 	height: 80px;
 	display: inline-block;
 }
-.upload ul li {
+.download ul li {
 	display: inline-block;
 }
-.upload input {
-	/*display: none;*/
-}
-.upload li div {
+.download li div {
 	display: none;
 }
-.upload li label {
+.download li label {
 	cursor: pointer;
 }
-.upload li input[checked]~div {
+.download li input[checked]~div {
 	display: block;
 }
