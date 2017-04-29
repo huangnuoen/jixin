@@ -12,16 +12,14 @@ function checkID (id) {
 }
 //获得href
 window.onload = function() {
-	var $links = $('.contacts .col-md-3 ul li a');
+	var $links = $('.contacts .col-md-3 ul li a[href]');
 	for (var i = 0; i < $links.length; i++) {
 		var href = $links[i].getAttribute('href');
 		var id = href.split('#')[1];
 		$links[i].destination = id;
 		$links[i].onclick = function() {
-			document.getElementById(id).style.display = 'none';
 			checkID(this.destination);
-			this.parentNode.setAttribute('class', 'selected');
-			$(this.parentNode).siblings().removeClass('selected');
+			$('.contacts .col-md-3 ul li li a.selected[href]').removeClass('selected');			this.setAttribute('class', 'selected');
 		}
 	};
 }

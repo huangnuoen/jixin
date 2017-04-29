@@ -4,6 +4,7 @@
 }
 ul {
 	list-style: none;
+	overflow: hidden;
 }
 a, a:hover, a:link, a:active, a:visited {
 	text-decoration: none;
@@ -20,15 +21,21 @@ a, a:hover, a:link, a:active, a:visited {
 	font-weight: normal;
 	padding: 10px;
 }
-.contacts ul li {
+.contacts ul li a {
 	padding: 10px;
 	margin-left: 30px;
 	border-left: 3px transparent solid;
+	width: 100%;
 }
-.contacts ul li:hover,
-.contacts ul li:active,
-.contacts ul li:visited,
-.contacts li.selected {
+.contacts ul li ul li,
+.contacts ul li ul li ul li {
+	margin-left: 30px;
+	border-left: 3px transparent solid;
+}
+.contacts ul a:hover,
+.contacts ul a:active,
+.contacts ul a:visited,
+.contacts a.selected {
 	background-color: #f5f5f5;
 	border-left-color: #337ab7;
 }
