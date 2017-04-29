@@ -5,6 +5,22 @@
 a, a:hover, a:active, a:visited, a:link {
 	text-decoration: none;
 }
+/*下载按钮*/
+.download button {
+	width: 15%;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background-color: #137bdf;
+	color: #fff;
+	border-radius: 5px;
+}
+.download button:hover {
+	color: #000;
+	border: 1px solid #137bdf;
+	background-color: transparent;
+	transition: all 1s;
+}
 .download img {
 	width: 80px;
 	height: 80px;
@@ -12,15 +28,18 @@ a, a:hover, a:active, a:visited, a:link {
 }
 .download ul.sort {
 	width: 100%;
-	padding-left: 30px; 
 	background-color: #f5f5f5;
 }
-.download ul.sort li:hover {
-	border-bottom: 3px solid #137bdf;
+.download ul.sort li {
+	border-bottom: 3px transparent solid;
+}
+.download ul.sort li.selected {
+	border-bottom-color: #137bdf;
+	background-color: #fff;
 }
 .download ul li {
 	font-size: 18px;
-	padding: 6px 12px;
+	padding: 8px 16px;
 	display: inline-block;
 }
 .download li div {
