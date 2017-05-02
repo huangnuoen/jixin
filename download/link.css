@@ -1,0 +1,44 @@
+.link {
+	font-family: "Microsoft Yahei",tahoma,HELVETICA;
+	font-size: 18px;
+}
+/*下载按钮*/
+.link button {
+	width: 20%;
+	height: 40px;
+	font-size: 18px;
+	border: none;
+	background-color: #137bdf;
+	color: #fff;
+	border-radius: 5px;
+	margin: 10px 10px 10px 70px;
+}
+.link button:hover {
+	color: #137bdf;
+	border: 1px solid #137bdf;
+	background-color: transparent;
+	transition: all 1s;
+}
+.link h3 {
+	font-size: 160%;
+	padding: 8px;
+	border-bottom: 3px #eee solid;
+}
+.link img {
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+.link .col-md-7 p {
+	display: inline-block;
+	width: 48%;
+	padding: 6px;
+}
+.link .detail h4 {
+	background-color: #eee;
+	padding: 8px 0 8px 16px;
+	color: #137bdf;
+}
+.detail p {
+	text-indent: 40px;
+}

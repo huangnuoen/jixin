@@ -4,26 +4,12 @@
 }
 a, a:hover, a:active, a:visited, a:link {
 	text-decoration: none;
+	cursor: pointer;
 }
-/*下载按钮*/
-.download button {
-	width: 15%;
-	height: 40px;
-	font-size: 16px;
-	border: none;
-	background-color: #137bdf;
-	color: #fff;
-	border-radius: 5px;
-}
-.download button:hover {
-	color: #000;
-	border: 1px solid #137bdf;
-	background-color: transparent;
-	transition: all 1s;
-}
+/*图标样式*/
 .download img {
-	width: 80px;
-	height: 80px;
+	width: 70px;
+	height: 70px;
 	display: inline-block;
 }
 .download ul.sort {
@@ -42,12 +28,14 @@ a, a:hover, a:active, a:visited, a:link {
 	padding: 8px 16px;
 	display: inline-block;
 }
-.download li div {
-	display: none;
+.download .software li {
+	border: 1px solid transparent;
+	margin-right: 8px;
 }
-.download li label {
-	cursor: pointer;
+.download .software li:hover {
+	border: 1px solid #ccc;
 }
-.download li input[checked]~div {
+.download .software a span {
 	display: block;
+	text-align: center;
 }
