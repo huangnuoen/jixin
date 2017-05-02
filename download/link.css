@@ -11,7 +11,7 @@
 	background-color: #137bdf;
 	color: #fff;
 	border-radius: 5px;
-	margin: 10px 10px 10px 70px;
+	margin: 10px auto;
 }
 .link button:hover {
 	color: #137bdf;
@@ -29,7 +29,7 @@
 	width: 100px;
 	height: 100px;
 }
-.link .col-md-7 p {
+.link .col-md-9 p {
 	display: inline-block;
 	width: 48%;
 	padding: 6px;
