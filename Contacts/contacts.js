@@ -19,9 +19,7 @@ window.onload = function() {
 		$links[i].destination = id;
 		$links[i].onclick = function() {
 			checkID(this.destination);
-			$('.contacts .col-md-3 ul li li a.selected[href]').removeClass('selected');			this.setAttribute('class', 'selected');
+			$(this).parent().addClass('selected').siblings().removeClass('selected');
 		}
 	};
 }
-
-
