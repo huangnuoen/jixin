@@ -19,7 +19,8 @@ function goSolfware() {
 		$links[i].destination = id;
 		$links[i].onclick = function() {
 			checkID(this.destination);
-			$(this).parent().addClass('selected').siblings().removeClass('selected');	
+			$(this).parent().addClass('selected').siblings().removeClass('selected');//更新导航选中样式	
+			return false;//阻止点击后的默认跳转
 		}
 	};
 }

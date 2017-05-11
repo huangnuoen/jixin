@@ -1,10 +1,11 @@
 .link {
 	font-family: "Microsoft Yahei",tahoma,HELVETICA;
 	font-size: 18px;
+	/*width: 650px;*/
 }
 /*下载按钮*/
 .link button {
-	width: 20%;
+	width: 36%;
 	height: 40px;
 	font-size: 18px;
 	border: none;
@@ -23,15 +24,13 @@
 	font-size: 160%;
 	padding: 8px;
 	border-bottom: 3px #eee solid;
+	margin-bottom: 20px;
 }
 .link img {
-	float: left;
-	width: 100px;
-	height: 100px;
+	width: 180px;
+	height: 180px;
 }
-.link .col-md-9 p {
-	display: inline-block;
-	width: 48%;
+.link .col-md-6 p {
 	padding: 6px;
 }
 .link .detail h4 {
@@ -41,4 +40,5 @@
 }
 .detail p {
 	text-indent: 40px;
+	line-height: 1.6;
 }
