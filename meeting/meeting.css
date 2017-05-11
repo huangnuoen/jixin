@@ -26,5 +26,13 @@ table, th, td {
 }
 .meeting .row table tr td {
 	text-align: left;
-	padding: 18px;
+	padding: 15px;
 }
+.meeting table tr:first-child th:first-child + td {
+	width: 50%;	
+/* 	max-width: 500px; */
+}
+/* .meeting table tr:first-child td:last-child {
+	min-width: 100px;
+	max-width: 200px;
+} */
