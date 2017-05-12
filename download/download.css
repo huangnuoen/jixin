@@ -1,44 +1,63 @@
 * {
-	margin: 0;
-	padding: 0;
-}
+  margin: 0;
+  padding: 0; }
+
+@font-face {
+  font-family: 'iconfont';
+  /* project id 300833 */
+  src: url("//at.alicdn.com/t/font_ypgwk2egusjrlik9.eot");
+  src: url("//at.alicdn.com/t/font_ypgwk2egusjrlik9.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_ypgwk2egusjrlik9.woff") format("woff"), url("//at.alicdn.com/t/font_ypgwk2egusjrlik9.ttf") format("truetype"), url("//at.alicdn.com/t/font_ypgwk2egusjrlik9.svg#iconfont") format("svg"); }
 a, a:hover, a:active, a:visited, a:link {
-	text-decoration: none;
-	cursor: pointer;
-}
-/*图标样式*/
-.download img {
-	width: 70px;
-	height: 70px;
-	display: inline-block;
-}
-.download ul.sort {
-	width: 100%;
-	background-color: #f5f5f5;
-}
-.download ul.sort li {
-	border-bottom: 3px transparent solid;
-}
-.download ul.sort li.selected {
-	border-bottom-color: #137bdf;
-	background-color: #fff;
-}
-.download ul li {
-	font-size: 18px;
-	padding: 8px 16px;
-	display: inline-block;
-}
-.download .software li {
-	border: 1px solid transparent;
-	margin-right: 8px;
-}
-.download .software li:hover {
-	border: 1px solid #ccc;
-}
-.download .software a span {
-	display: block;
-	text-align: center;
-}
+  text-decoration: none;
+  cursor: pointer;
+  color: #046edc; }
+
+ul {
+  list-style: none;
+  overflow: hidden; }
+
+.container h4 {
+  background-color: #337ab7;
+  color: #fff;
+  font-weight: normal;
+  padding: 12px; }
+.container ul.sort {
+  margin-left: 30px;
+  width: 88%; }
+  .container ul.sort li {
+    font-size: 18px; }
+    .container ul.sort li a {
+      width: 100%;
+      padding: 8px;
+      display: inline-block;
+      border-left: 3px transparent solid; }
+      .container ul.sort li a:hover {
+        background-color: #f5f5f5;
+        border-left: 3px #337ab7 solid; }
+    .container ul.sort li.selected a {
+      background-color: #f5f5f5;
+      border-left: 3px #337ab7 solid; }
+.container .col-md-3 {
+  border-right: 1px solid #337ab7;
+  margin-top: 20px;
+  padding-right: 20px;
+  min-height: 600px;
+  height: auto; }
+.container ul.software li {
+  border-bottom: 1px #ccc dashed;
+  padding: 10px;
+  font-size: 18px; }
+  .container ul.software li a:hover {
+    color: #f65b04; }
+  .container ul.software li time {
+    float: right;
+    color: #999;
+    font-size: 16px; }
+.container .col-md-8 {
+  margin: 20px 0;
+  padding-left: 20px; }
+
 #office {
-	display: none;
-}
+  display: none; }
+
+/*# sourceMappingURL=download.css.map */
