@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task_29</title>
+	<style>
+		table {
+			margin: 50px auto;
+		}
+		td:first-child {
+			height: 50px;
+			font-size: 24px;
+			padding-right: 30px;
+		}
+		td:nth-child(3) {
+			padding-left: 10px;
+		}
+		input {
+			width: 250px;
+			height: 32px;
+			border-radius: 5px;
+			border-color: #ccc;
+		}
+		button {
+			background-color: #2563AD;
+			color: #fff;
+			height: 40px;
+			width: 90px;
+			font-size: 24px;
+			border: none;
+			border-radius: 5px;
+		}
+		.tip {
+			color: #ccc;
+			font-size: 20px;
+			vertical-align: top;
+		}
+		.wrong {
+			color: red;
+		}
+		.right {
+			color: green;
+		}
+		.red {
+			border-color: red;
+		}
+		.green {
+			border-color: green;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>名称</td>
+			<td><input type="text"></td>
+			<td><button>验证</button></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td id="info" class="tip">必填，长度为4~16个字符</td>
+			<td></td>
+		</tr>
+	</table>	
+</body>
+<script>
+	var name = document.getElementsByTagName('input')[0],
+		infoWord = document.getElementById('info');
+	document.getElementsByTagName('button')[0].onclick = check;
+	
+	function check() {
+		document.getElementsByTagName('input')[0].className = '';		
+		var a = getLength();
+		if(a>=4 && a<=16) {
+			infoWord.innerHTML = '格式正确';
+			infoWord.className = 'right';
+			document.getElementsByTagName('input')[0].className = 'green';		
+		} else {
+			infoWord.innerHTML = '格式错误';
+			infoWord.className = 'wrong';
+			document.getElementsByTagName('input')[0].className = 'red';		
+		}
+
+	}
+ 	function getLength () {
+		var name = document.getElementsByTagName('input')[0];
+		var inputValue = name.value.trim();
+		var len = 0;
+		if(inputValue) {
+			for (var i = 0; i < inputValue.length; i++) {
+				var code = inputValue.charCodeAt(i);
+				if(code >= 0 && code <= 128) {
+					len += 1;
+				} else {
+					len += 2;
+				}
+			};
+		}
+		return len;
+	}
+
+
+</script>
+</html>
