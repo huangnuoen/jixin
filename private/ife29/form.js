@@ -45,3 +45,10 @@ function sumbit() {
 		alert('填写数据不合格');
 	}
 }
+function init(){
+	var input = $all('input');
+	for(var i=0; i< input.length; i++) {
+		input[i].onfocus = alert('2');
+	}
+}
+init();
