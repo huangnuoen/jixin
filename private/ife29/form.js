@@ -115,7 +115,7 @@ for(var i = 0 ; i < arrInput.length; i++) {
 		} else if(verify(this) == 'wrong') {
 			span.className = 'visible ' + 'wrong';
 			this.style.borderColor = 'red';
-			span.innerHTML = wrongTip[index];
+			span.innerHTML = '*' + wrongTip[index];
 		} else if(verify(this) == 'right') {
 			span.innerHTML = '√格式正确';
 			span.className = 'visible ' + 'right';
