@@ -6,6 +6,7 @@ function $all(a) {
 }
 var btn = $('button'),
 	input = $all('input');
+btn.onclick = sumbit;
 //将nodelist转化为array
 var arrInput = [].slice.call(input);
 var wrongTip = ['名称长度必须在4-16字符之间', '请输入6到16位字符且只能为数字和字母', '两次密码必须一致', '电子邮箱不合法', '手机号码格式错误'];
@@ -28,21 +29,43 @@ function verify(ele) {
 			return result.right;
 		}
 	}
-/*	document.getElementsByTagName('input')[0].className = '';		
-	var a = getLength();
-	if(a>=4 && a<=16) {
-		infoWord.innerHTML = '格式正确';
-		infoWord.className = 'right';
-		document.getElementsByTagName('input')[0].className = 'green';		
-	} else {
-		infoWord.innerHTML = '格式错误';
-		infoWord.className = 'wrong';
-		document.getElementsByTagName('input')[0].className = 'red';		
+	//密码
+	if(ele === arrInput[1]) {
+		var len = getLength(ele.value);
+		if(len >= 6 && len <= 16) {
+			return result.right;
+		} else {
+			return result.wrong;
+		}
 	}
-*/
+	//密码确认
+	if(ele === arrInput[2]) {
+		var password = arrInput[1].value;
+		if(password === ele.value) {
+			return result.right;
+		} else {
+			return result.wrong;
+		}
+	}
+	//电子邮箱
+	if(ele === arrInput[3]) {
+		if(!(ele.value.match(/^[^\.@]+@[^\.@]+\.[a-z]+$/))) {
+			return result.wrong;
+		} else {
+			return result.right;
+		}
+	}
+	if(ele === arrInput[4]) {
+		if(ele.value == parseInt(ele.value)) {
+			var len = getLength(ele.value);
+			if(len === 11) {
+				return result.right;
+			}
+		} 
+	return result.wrong;
+	}
 }
 function getLength(val) {
-	var name = document.getElementsByTagName('input')[0];
 	var inputValue = val.trim();
 	var len = 0;
 	if(inputValue) {
@@ -58,11 +81,20 @@ function getLength(val) {
 	return len;
 }
 function sumbit() {
-	if(result == 'right') {
-		alert('数据已经提交！');
+	var span = document.querySelectorAll('span');
+	var j = 0;
+	for (var i = 0; i < span.length; i++) {
+		var text = span[i].innerText;
+		if (text === '√格式正确') {
+			j++;
+		} 
+	};
+	if(j == 5) {
+		alert('表单已经提交！');
 	} else {
-		alert('填写数据不合格');
+		alert('表单填写不完整！');
 	}
+	
 }
 //为每个input添加事件
 for(var i = 0 ; i < arrInput.length; i++) {
@@ -77,7 +109,7 @@ for(var i = 0 ; i < arrInput.length; i++) {
 		var index = arrInput.indexOf(e.target);
 		var span = this.parentNode.querySelector('span');
 		if(/*verify(this)==1*/verify(this) == 'empty') {
-			span.innerHTML = '不能为空';
+			span.innerHTML = '*不能为空';
 			span.className = 'visible ' + 'wrong';
 			this.style.borderColor = 'red';
 		} else if(verify(this) == 'wrong') {
@@ -85,7 +117,7 @@ for(var i = 0 ; i < arrInput.length; i++) {
 			this.style.borderColor = 'red';
 			span.innerHTML = wrongTip[index];
 		} else if(verify(this) == 'right') {
-			span.innerHTML = '格式正确';
+			span.innerHTML = '√格式正确';
 			span.className = 'visible ' + 'right';
 			var color = window.getComputedStyle(span, null).color;
 			this.style.borderColor = color;
