@@ -4,10 +4,23 @@
 	<meta charset="UTF-8">
 	<title>task_29</title>
 	<style>
-		.tip {
+		span {
 			visibility: hidden;
 			width: 150px;
 			height: 30px;
+			color: gray;
+			font-size: 75%;
+			padding: 4px;
+		}
+		span.visible {
+			visibility: visible;
+		}
+		span.wrong {
+			color: red;
+		}
+		input:focus {
+			outline: none;
+			border-color: #8ec6f0;
 		}
 		form {
 			display: flex;
@@ -69,11 +82,8 @@
 		</div>
 		<div>
 			<label for="">电子邮箱</label>
-
-			</label>
-
 			<input type="email">
-			<span class="tip"></span>
+			<span class="tip">请输入合法电子邮箱</span>
 		</div>
 		<div>
 			<label for="">手机</label>
