@@ -4,101 +4,97 @@
 	<meta charset="UTF-8">
 	<title>task_29</title>
 	<style>
-		table {
-			margin: 50px auto;
+		span {
+			visibility: hidden;
+			width: 150px;
+			height: 30px;
+			color: gray;
+			font-size: 75%;
+			padding: 4px;
 		}
-		td:first-child {
-			height: 50px;
-			font-size: 24px;
-			padding-right: 30px;
+		span.visible {
+			visibility: visible;
 		}
-		td:nth-child(3) {
-			padding-left: 10px;
-		}
-		input {
-			width: 250px;
-			height: 32px;
-			border-radius: 5px;
-			border-color: #ccc;
-		}
-		button {
-			background-color: #2563AD;
-			color: #fff;
-			height: 40px;
-			width: 90px;
-			font-size: 24px;
-			border: none;
-			border-radius: 5px;
-		}
-		.tip {
-			color: #ccc;
-			font-size: 20px;
-			vertical-align: top;
-		}
-		.wrong {
+		span.wrong {
 			color: red;
 		}
-		.right {
-			color: green;
+		span.right {
+			color: #25be66;
 		}
-		.red {
-			border-color: red;
+		input:focus {
+			outline: none;
+			border-color: #8ec6f0;
 		}
-		.green {
-			border-color: green;
+		form {
+			display: flex;
+			flex-flow: column;
+			border: 1px solid pink;
+			width: 460px;
+			border-radius: 10px;
+			padding: 10px;
+			margin: 0 auto;
+		}
+		form div {
+			width: 450px;
+			margin: 1%;
+		}
+		div {
+			display: flex;
+			justify-content: space-between;
+		}
+		label {
+			width: 130px;
+			height: 30px;
+		}
+		input {
+			width: 200px;	
+			height: 26px;
+			border: 1px gray solid;
+			border-radius: 5px;
+		}
+		button {
+		    width: 45%;
+		    height: 40px;
+		    background: pink;
+		    color: #fff;
+		    border: none;
+		    border-radius: 5px;
+		    font-size: 120%;
+		    margin: 20px auto 0 80px;
+		    cursor: pointer;
 		}
 	</style>
 </head>
 <body>
-	<table>
-		<tr>
-			<td>名称</td>
-			<td><input type="text"></td>
-			<td><button>验证</button></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td id="info" class="tip">必填，长度为4~16个字符</td>
-			<td></td>
-		</tr>
-	</table>	
+	<form action="">
+		<div>
+			<label for="">名称
+			</label>
+			<input type="text">
+			<span class="tip">请输入4-16个字符</span>
+		</div>
+		<div>
+			<label for="">密码</label>
+			<input type="password">
+			<span class="tip">请输入8位数字和字母</span>
+		</div>
+		<div>
+			<label for="">密码确认</label>
+			<input type="password">
+			<span class="tip">请输入密码</span>
+		</div>
+		<div>
+			<label for="">电子邮箱</label>
+			<input type="email">
+			<span class="tip">请输入合法电子邮箱</span>
+		</div>
+		<div>
+			<label for="">手机</label>
+			<input type="text">
+			<span class="tip">请输入11位手机号</span>
+		</div>
+		<button>验证</button>
+	</form>
+<script type="text/javascript" src="form.js"></script>
 </body>
-<script>
-	var name = document.getElementsByTagName('input')[0],
-		infoWord = document.getElementById('info');
-	document.getElementsByTagName('button')[0].onclick = check;
-	
-	function check() {
-		document.getElementsByTagName('input')[0].className = '';		
-		var a = getLength();
-		if(a>=4 && a<=16) {
-			infoWord.innerHTML = '格式正确';
-			infoWord.className = 'right';
-			document.getElementsByTagName('input')[0].className = 'green';		
-		} else {
-			infoWord.innerHTML = '格式错误';
-			infoWord.className = 'wrong';
-			document.getElementsByTagName('input')[0].className = 'red';		
-		}
-
-	}
- 	function getLength () {
-		var name = document.getElementsByTagName('input')[0];
-		var inputValue = name.value.trim();
-		var len = 0;
-		if(inputValue) {
-			for (var i = 0; i < inputValue.length; i++) {
-				var code = inputValue.charCodeAt(i);
-				if(code >= 0 && code <= 128) {
-					len += 1;
-				} else {
-					len += 2;
-				}
-			};
-		}
-		return len;
-	}
-
-
-</script>
 </html>
