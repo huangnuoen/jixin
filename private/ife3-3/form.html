@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单联动</title>
+	<style>
+	form {
+		width: 400px;
+		font-size: 100%;
+		color: #68b7f2;
+		margin: 10px auto;
+		border: 1px solid;
+		border-radius: 5px;
+		font-family: "楷体";
+		vertical-align: middle;
+		line-height: 1.2;
+	}
+	form div {
+		margin: 20px;
+	}
+	.info {
+		display: none;
+	}
+	input[type='text'] {
+		border-radius: 5px;
+		border: 1px #68b7f2 solid;
+		height: 22px;
+		box-shadow: 0.19em .2em .1em rgba(0,0,0,.5);
+	}
+	#area {
+		display: block;
+	}
+	</style>
+</head>
+<body>
+	<form action="">
+		<div>
+			<input type="radio" name="job" id="student" value="student" checked><label for="student">在校生</label>
+			<input type="radio" name="job" id="worker" value="worker"><label for="worker">非在校生</label>
+		</div>
+		<div class="info" id="area">
+			<label for="school">学校</label>
+			<select id="school">
+				<option value="BJ">北京</option>
+				<option value="GD">广东</option>
+				<option value="SH">上海</option>
+			</select>
+			<select name="" id="new">
+			</select>
+		</div>
+		<div id="work" class="info">
+			<label for="">就业单位</label>
+			<input type="text">
+		</div>
+	</form>
+	<script type="text/javascript" src="form.js"></script>
+</body>
+</html>
