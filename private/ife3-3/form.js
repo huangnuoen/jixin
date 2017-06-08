@@ -1,8 +1,10 @@
+//不同地区的大学作为对象进行保存
 var area = {
 	BJ: ['清华大学', '人民大学', '科技大学', '北京大学'],
 	GD: ['中山大学', '华南理工', '广州大学', '深圳大学'],
 	SH: [ '交通大学', '复旦大学', ]
 }
+//根据radio选择的值出现相应的div
 function getInput () {
 	for (var i = 0; i < radio.length; i++) {
 		if(radio[i].checked) {
@@ -20,9 +22,10 @@ function getInput () {
 		}
 	};
 }
+//通过for循环绑定点击事件
 var radio = document.getElementsByName('job');
 for (var i = 0; i < radio.length; i++) {
-	radio[i].onclick = getInput;
+	radio[i].addEventListener('click', getInput);
 };
 function showSchool() {
 	var select = document.querySelector('#school');
@@ -37,11 +40,12 @@ function showSchool() {
 			};
 		}
 	}
+	//将生成的option添加到select中
 	var shoolSelect = document.getElementById('new');
 	shoolSelect.innerHTML = newOption;
 }
 var school = document.querySelector('#school');
 //select状态改变时，执行showSchool函数
-school.onchange = showSchool;
+school.addEventListener('change', showSchool);
 //文档开始加载时先执行一次showSchool
 showSchool();
