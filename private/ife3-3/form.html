@@ -27,24 +27,25 @@
 		height: 22px;
 		box-shadow: 0.19em .2em .1em rgba(0,0,0,.5);
 	}
+	#area {
+		display: block;
+	}
 	</style>
 </head>
 <body>
 	<form action="">
 		<div>
-			<input type="radio" name="job" id="student"><label for="student">在校生</label>
-			<input type="radio" name="job" id="worker"><label for="worker">非在校生</label>
+			<input type="radio" name="job" id="student" value="student" checked><label for="student">在校生</label>
+			<input type="radio" name="job" id="worker" value="worker"><label for="worker">非在校生</label>
 		</div>
-		<div id="school" class="info">
+		<div class="info" id="area">
 			<label for="school">学校</label>
-			<select name="" id="">
-				<option value="">北京</option>
-				<option value="">广东</option>
+			<select id="school">
+				<option value="BJ">北京</option>
+				<option value="GD">广东</option>
+				<option value="SH">上海</option>
 			</select>
-			<select name="" id="">
-				<option value="">北京大学</option>
-				<option value="">清华大学</option>
-				<option value="">人民大学</option>
+			<select name="" id="new">
 			</select>
 		</div>
 		<div id="work" class="info">
