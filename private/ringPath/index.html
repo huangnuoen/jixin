@@ -2,38 +2,42 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1, user-scalable=no" />
 	<title>环形运动</title>
 	<style>
 		.path {
-			width: 300px;
-			height: 300px;
+			width: 3rem;
+			height: 3rem;
 			background-color: pink;
 			border-radius: 50%;
 			position: relative;
 		}
 		img.second {
-			position: absolute;
-			top: 16px;
-			left: 25%;
+			top: .16rem;
+			left: .75rem;
 		}
 		img.avatar {
+			top: 0;
+			left: 1.35rem;
+		}
+		img {
+			width: .32rem;
+			height: .32rem;
 			position: absolute;
-			top: 0.1%;
-			left: 45%;
 		}
 		@keyframes spin {
 			from {/* 改变原点位置 */
-				transform: translate(240%, 134px)  
+				transform: translate(0.77rem, 1.34rem)  
 				rotate(0turn) 
-				translate(-240%, -134px) 
+				translate(-0.77rem, -1.34rem) 
 				translate(50%, 50%) 
 				rotate(1turn)
 				translate(-50%, -50%);				
 			}
 			to {/* 旋转一周 */
-				transform: translate(240%, 134px) 
+				transform: translate(0.77rem, 1.34rem) 
 				rotate(1turn) 
-				translate(-240%, -134px) 
+				translate(-0.77rem, -1.34rem) 
 				translate(50%, 50%) 
 				rotate(0turn)
 				translate(-50%, -50%);		
@@ -41,26 +45,26 @@
 		}
 		@keyframes spin1 {
 			from {/* 改变原点位置 */
-				transform: translate(50%, 150px)  
+				transform: translate(50%, 1.5rem)  
 				rotate(0turn) 
-				translate(-50%, -150px) 
+				translate(-50%, -1.5rem) 
 				translate(50%, 50%) 
 				rotate(1turn)
 				translate(-50%, -50%);				
 			}
 			to {/* 旋转一周 */
-				transform: translate(50%, 150px) 
+				transform: translate(50%, 1.5rem) 
 				rotate(1turn) 
-				translate(-50%, -150px) 
+				translate(-50%, -1.5rem) 
 				translate(50%, 50%) 
 				rotate(0turn)
 				translate(-50%, -50%);		
 			}
 		}
-		.second {
+   		.second {
 			animation: spin 20s infinite linear;
-/* 			规定圆心
-		 */		}
+		/* 规定圆心 */
+		}
 		.avatar {
 			animation: spin1 20s infinite linear;
 		}
@@ -71,5 +75,9 @@
 		<img src="lea.png" class="avatar">
 		<img src="lea.png" class="second">
 	</div>
-</body>
+	<script type="text/javascript">
+	window.onload = function() {document.documentElement.style.fontSize = document.documentElement.clientWidth/10 + "px";	}
+	window.onresize = function() {document.documentElement.style.fontSize = document.documentElement.clientWidth/10 + "px";	}
+	</script>
+	</body>
 </html>
