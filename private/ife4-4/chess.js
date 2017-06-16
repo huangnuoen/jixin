@@ -8,9 +8,5 @@ function go () {
 	return false;
 }
 var g = document.getElementById('go');
-g.addEventListener('click', function(){
-	go();
-	return false;
-
-});
+g.onclick = go;
 //改变方向
