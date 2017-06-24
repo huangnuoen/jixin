@@ -4,6 +4,10 @@
 	<meta charset="UTF-8">
 	<title>loading</title>
 	<style>
+		.wrapper {
+			margin: 0 auto;
+			position: relative;
+		}
 		.circle {
 			width: 0px;
 			height: 0px;
@@ -19,8 +23,18 @@
 			top: 108px;
 			left: 8px;
 			z-index: 2;
-/* 			border-bottom-right-radius: 50px;
-		 */		}
+		}
+		.outer {
+			position: absolute;
+			top: 98px;
+			left: -6px;
+			width: 120px;
+			height: 120px;
+			border: 4px deeppink solid;
+			border-radius: 50%;
+			border-top: transparent;
+			animation: turn 1s infinite linear;
+		}
 		.half {
 			width: 0px;
 			height: 0px;
@@ -47,6 +61,14 @@
 			top: 108px;
 			left: 8px;
 			z-index: 4;/* 在全圆和粉红上面 */
+		}
+		@keyframes turn {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
 		}
 		@keyframes left {
 			from {
@@ -101,8 +123,11 @@
 	</style>
 </head>
 <body>
+<div class="wrapper">
+	<div class="outer"></div>
 	<div class="circle"></div>
 	<div class="half half1"></div>
 	<div class="half half2"></div>
+</div>
 </body>
 </html>
