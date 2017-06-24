@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UI组件浮出层</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		html {
+			height: 100%;
+		}
+		body {
+			height: 100%;
+		}
+		.container {
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+			font-size: 30px;
+			position: relative;
+		}
+		button {
+			padding: 3% 5%;
+			background-color: pink;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+			margin: 10px;
+		}
+		.layer {
+			display: none;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 200px;
+			height: 200px;
+			padding: 1% 5%;
+			border: 1px solid;
+			transform: translate(-50%, -50%);
+		}
+		.layer button {
+			margin-top: 52%;
+			margin-left: 71%;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form>
+			<button>登 陆</button>
+		</form>
+		<div class="mask"></div>
+		<div class="layer">
+			<p>这是一个弹窗</p>
+			<button>确定</button>
+		</div>
+	</div>
+	<script type="text/javascript" src="a.js"></script>
+</body>
+</html>
